@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shossuki Live2D Commission</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #d2d2d2;
+        background-image: url(images/whitebg.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+      }
+
+      body::before {
+        position: absolute;
+        width: min(1400px, 90vw);
+        top: 10%;
+        left: 50%;
+        height: 90%;
+        transform: translateX(-50%);
+        content: "";
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        pointer-events: none;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="banner">
+      <div class="content">
+        <p class="sho">Shossuki Live2D Commission</p>
+        <h1 data-content="RIGGING">VTUBER &nbsp;RIGGING</h1>
+        <div class="model"></div>
+      </div>
+
+      <div class="slider" style="--quantity: 10">
+        <div class="item" style="--position: 1">
+          <img src="images/1.jpg" alt="" data-testimoni="The communnication was mega good and the work was very good, I definitely recommend it =)"/>
+        </div>
+        <div class="item" style="--position: 2">
+          <img src="images/2.jpg" alt="" data-testimoni="Very Quick at making the adjustments needed - very nice and patient! Wonderful seller and artist!"/>
+        </div>
+        <div class="item" style="--position: 3">
+          <img src="images/3.jpg" alt="" data-testimoni="Amazing work! Amazing artist, amazing customer service! I could not be happier!"/>
+        </div>
+        <div class="item" style="--position: 4">
+          <img src="images/4.jpg" alt="" data-testimoni="Very good work and probably will work with them again!"/>
+        </div>
+        <div class="item" style="--position: 5">
+          <img src="images/5.jpg" alt="" data-testimoni="Absolutely astounding partner to work with. I was nervous about this as my idea had a lot of things not very common for this type of gig. Completely understanding, willing to help with questions and feedback on ideas, and the final product was AMAZING. I love the result, and loved the process getting to the result. I would absolutely work with them again, and will do so in the future"/>
+        </div>
+        <div class="item" style="--position: 6">
+          <img src="images/6.jpg" alt="" data-testimoni="One of the best studios on this app! seriously please place an order! you will not be disappointed!!"/>
+        </div>
+        <div class="item" style="--position: 7">
+          <img src="images/7.jpg" alt="" data-testimoni="It took a little longer, but that speaks for the quality. Comator delivers incredible quality. Many Thanks"/>
+        </div>
+        <div class="item" style="--position: 8">
+          <img src="images/8.jpg" alt="" data-testimoni="Very Pleased with the end result really well done. Communication was suberb."/>
+        </div>
+        <div class="item" style="--position: 9">
+          <img src="images/9.jpg" alt="" data-testimoni="It was an absolute pleasure working with comator. The work was outstanding and the seller provided excellent communication and customer service. Can't recommend them highly enough!"/>
+        </div>
+        <div class="item" style="--position: 10">
+          <img src="images/10.jpg" alt="" data-testimoni="The seller is absolutely amazing and does great work. Definitely recommends them for any project!"/>
+        </div>
+      </div>
+      <div id="popupBox" class="popup-box"></div>
+    </section>
+
+    <div class="section" id="normal-packages">
+      <h2>Premium Live2d <br> VTuber Rigging Commission</h2>
+      <p>Terima kasih telah mempercayaiku untuk mengerjakan proyekmu! Lanjutkan ke pemesanan setelah memahami Detail dan Persyaratan Layanan</p>
+
+      <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+          <th>No</th>
+          <th>Fullbody Rigging &nbsp; - &nbsp; Rp.4.000.000</th>
+          <th>Halfbody Rigging &nbsp; - &nbsp; Rp.3.000.000</th>
+          <th>Bustup Rigging &nbsp; - &nbsp; Rp.2.500.000</th>
+          <th>Fitur Tambahan</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Headtilt X, Y ,Z (9 axis)</td>
+          <td>Headtilt X, Y ,Z (9 axis)</td>
+          <td>Headtilt X, Y ,Z (9 axis)</td>
+          <td>Aksesoris - Rp.50.000</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Blinking (bouncing iris, eyelashes, etc)</td>
+          <td>Blinking (bouncing iris, eyelashes, etc)</td>
+          <td>Blinking (bouncing iris, eyelashes, etc)</td>
+          <td>Ekspresi Tambahan - Rp.30.000</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Advance Mouth Movement (With Vowel / AIUEO, Mouth X)</td>
+          <td>Advance Mouth Movement (With Vowel / AIUEO, Mouth X)</td>
+          <td>Advance Mouth Movement (With Vowel / AIUEO, Mouth X)</td>
+          <td>Ekstra Baju - Rp.200.000</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Breathing</td>
+          <td>Breathing</td>
+          <td>Breathing</td>
+          <td>Ekstra Rambut - Rp.120.000</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Body X, Y, Z (9 axis)</td>
+          <td>Body X, Y, Z (9 axis)</td>
+          <td>Body X, Y, Z (9 axis)</td>
+          <td>Hewan Peliharaan - Rp.200.000</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><b>Leaning / Hips Z</b></td>
+          <td><b>Leaning / Hips Z</b></td>
+          <td><b> - </b></td>
+          <td>Lidah - Rp.100.000</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Applied All Physics (Body, Clothes, Accessories, etc)</td>
+          <td>Applied All Physics (Body, Clothes, Accessories, etc)</td>
+          <td>Applied All Physics (Body, Clothes, Accessories, etc)</td>
+          <td>Source Files - 60% dari harga total awal</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><b>5 Expressions / Toggles</b></td>
+          <td><b>4 Expressions / Toggles</b></td>
+          <td><b>3 Expressions / Toggles</b></td>
+          <td>Model Cutting - Rp.500.000</td>
+        </tr>
+      </table>
+      
+
+      <div class="ordertab">
+        <p class="idr">
+          * Harga Internasional untuk USD = IDR : 10.000
+        </p>
+        <a href="index.html" target="_blank">
+          <button class="orderbtn-lang">English</button>
+        </a>
+        <a href="https://vgen.co/shossuki" target="_blank">
+          <button class="orderbtn">Pesan Sekarang</button>
+        </a>
+      </div>
+    
+    </div>
+
+  
+    <div class="section" id="terms-of-services">
+      <h2>+ Ketentuan Layanan +</h2>
+      <p>Lanjutkan ke pemesanan setelah memahami Detail dan Persyaratan Layanan</p>
+
+      <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+          <th>No</th>
+          <th>Ketentuan Layanan</th>
+          <th>Pembayaran</th>
+          <th>Revisi</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Kamu harus menyertakan model yang telah dicutting layernya menjadi beberapa bagian atau belum dicutting</td>
+          <td>Tidak ada pengembalian dana setelah proyek dimulai, pastikan Kamu memilih layanan yang tepat</td>
+          <td>Aku akan memberikan proses pengerjaan projek, dan Kamu dapat memeriksanya di VTube Studio</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Perkiraan waktu pengerjaan selama 2-3 minggu.
+            Waktu pengerjaan dapat bertambah tergantung pada tingkat kesulitan model
+            </td>
+
+    
+          <td>Jika Aku tidak dapat melanjutkan proyek Kamu, Aku akan memberikan file yang telah dikerjakan dan mendiskusikan pengembalian dana sebagian</td>
+          <td>Jika ada kesalahan atau bug dalam model, jangan ragu untuk memberi tahu Aku dan Aku akan memperbaikinya</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Aku hanya mengirimkan hasil rigging dalam bentuk runtime (.moc3) untuk digunakan dalam VTubeStudio</td>
+          <td>Pembayaran uang muka 50% atau pembayaran penuh sebelum proyek dimulai</td>
+          <td>Revisi akan dilakukan 3-5 kali setelah bekerja. Jika kesalahan itu dari Aku, maka Aku tidak akan mengenakan biaya tambahan</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Jika Kamu menginginkan file sumber, Kamu dapat menambahkan biaya tambahan sebesar 50% dari total harga</td>
+          <td>Pembayaran dapat dilakukan melalui Paypal, Transfer Wise, VGen, Fiverr</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Kamu dapat memilih platform apa pun untuk berkomunikasi</td>
+          <td>Dan untuk klien lokal, pembayaran dapat dilakukan melalui BCA, Dana, Ovo, Gopay, Shopeepay</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Kamu harus menyertakan Aku sebagai rigger</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Kamu dapat meminta fitur tambahan apa pun untuk model Kamu di lain waktu, jangan ragu untuk bertanya kepadaku</td>          
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+
+    </div>
+
+    <div class="section" id="workflow">
+      <h2>+ Alur Proyek +</h2>
+      <p>Alur kerja proyek akan berjalan sebagai berikut</p>
+    
+      <div class="step">
+        <div class="workflow-item">
+          <i class="fas fa-comments"></i>
+          <p>1. Pemesanan dapat dilakukan melalui Chat (Media Sosial Kamu), VGen, Google Form</p>
+        </div>
+    
+        <div class="workflow-item">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>2. Kamu perlu memberikan file model. Jika file yang Aku terima masih belum tercutting atau ada yang kurang, Aku akan memberi tahumu dan memperkirakan durasi pengerjaan</p>
+        </div>
+    
+        <div class="workflow-item">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <p>3. Invoice akan dikirim ke klien melalui pesan langsung (Media Sosial Kamu) / Email</p>
+        </div>
+    
+        <div class="workflow-item">
+          <i class="fas fa-hammer"></i>
+          <p>4. Setelah Invoice dibayarkan, pengerjaan pesanan dimulai</p>
+        </div>
+    
+        <div class="workflow-item">
+          <i class="fas fa-bell"></i>
+          <p>5. Update progres pengerjaan akan dilakukan dengan mengirimkan video/gambar rigging yang telah dilakukan. Dan Kamu dapat meminta revisi jika ada yang salah</p>
+        </div>
+    
+        <div class="workflow-item">
+          <i class="fas fa-file-export"></i>
+          <p>6. Setelah pekerjaan selesai, Aku akan mengirimkan file dan Kamu masih dapat meminta revisi jika ada yang salah</p>
+        </div>
+    
+        <div class="workflow-item">
+          <i class="fas fa-plus-circle"></i>
+          <p>7. Kamu dapat meminta fitur tambahan apa pun untuk model Kamu di lain waktu, jangan ragu untuk bertanya kepada Aku</p>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="section video-background" id="testimonies">
+      <div class="video-container">
+        <iframe
+          id="bg-video"
+          src="https://www.youtube.com/embed/zvcTo3NV6fY?autoplay=1&mute=1&loop=1&playlist=zvcTo3NV6fY&controls=0&showinfo=0&modestbranding=1&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="overlay"></div>
+
+      <div class="text">
+
+        <h2>+ VTuber Rigging! +</h2>
+        <p>Kamu dapat memulai karier sebagai VTuber! Jangan ragu untuk bertanya kepadaku dan wujudkan impian Kamu! <a href="https://www.fiverr.com/comator/make-live2d-showcase-comission">Testimoni Lain</a></p>
+
+        <div class="review">
+          <div class="review-content">
+            <p class="testimonial"></p>
+            <h4 class="customer"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+<div class="section" id="getintouch">
+  <h2>+ Hubungi Aku +</h2>
+  <p>Masih bingung apa yang Kamu mau? Jangan sungkan untuk menghubungiku!</p>
+  
+  <div class="form-container">
+    <form id="contactForm">
+    
+      <label for="name">Nama</label>
+      <input type="text" id="name" name="name" placeholder="Tolong masukan nama Kamu" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Tolong masukan Email Kamu" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tulis pesanmu di sini..." required></textarea>
+
+      <button type="submit">Kirim Pesan</button>
+
+      <p id="statusMessage"></p>
+    </form>
+  </div>
+
+  <div class="more-navbtn"> 
+    <a href="https://vgen.co/shossuki" target="_blank">
+      <button class="navbtn">VGen</button>
+    </a>
+    <a href="https://linktr.ee/shossuki" target="_blank">
+      <button class="navbtn">Linktr</button>
+    </a>
+    <a href="https://www.instagram.com/shossuki/" target="_blank">
+      <button class="navbtn">Instagram</button>
+    </a>
+    </div>
+  
+    <div class="more-navbtn"> 
+      <a href="https://x.com/shossuki" target="_blank">
+        <button class="navbtn">X</button>
+      </a>
+      <a href="https://www.fiverr.com/s/4daRLm" target="_blank">
+        <button class="navbtn">Fiverr</button>
+      </a>
+      <a href="https://www.tiktok.com/@shossuki.ch" target="_blank">
+        <button class="navbtn">Tiktok</button>
+      </a>
+      </div>
+</div>
+
+
+<div class="section" id="more">
+  <h2>+ Portfolio +</h2>
+  <img src="/images/VTuber.png" alt="">
+  <a href="https://vgen.co/shossuki/portfolio">
+  <button class="moresamples">Sampel Lain</button>
+  </a>
+
+
+</div>
+
+
+    
+    <div class="section" id="faq">
+      <h2>+ FAQ +</h2>
+      <p>Masih bingung? lihat ini</p>
+      <div class="faq-container">
+        <div class="faq-column">
+            <div class="faq-item">
+                <h3 class="faq-question">Apa saja yang termasuk dalam layanan rigging?</h3>
+                <p class="faq-answer">Layanan rigging meliputi gerakan dasar seperti mata, mulut, kepala, dan ekspresi tambahan jika diminta</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Format file apa yang dibutuhkan?</h3>
+                <p class="faq-answer">File yang dibutuhkan adalah PSD dengan lapisan layer yang dipisahkan dengan rapi untuk memudahkan proses rigging</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Berapa lama waktu yang dibutuhkan?</h3>
+                <p class="faq-answer">Durasi pengerjaan tergantung pada tingkat kerumitan rigging, biasanya sekitar 1-3 minggu</p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-question">Bisakah Aku meminta ekspresi tambahan?</h3>
+              <p class="faq-answer">Tentu! Kamu dapat menambahkan ekspresi tambahan dengan biaya tambahan sesuai daftar harga</p>
+            </div>
+        </div>
+        <div class="faq-column">
+            <div class="faq-item">
+                <h3 class="faq-question">Dapatkah saya meminta revisi?</h3>
+                <p class="faq-answer">Ya, Anda dapat meminta revisi kecil. Revisi besar mungkin dikenakan biaya tambahan tergantung pada permintaan
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Bagaimana sistem pembayarannya?</h3>
+                <p class="faq-answer">Pembayaran dilakukan melalui sistem DP (Down Payment) sebesar 50% di muka dan sisanya setelah pemasangan selesai</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Apakah model yang sudah dipasang bisa dijual kembali?</h3>
+                <p class="faq-answer">Tidak, model yang sudah dirigging tidak boleh dijual kembali tanpa izin dari Aku</p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-question">Bagaimana cara memesan?</h3>
+              <p class="faq-answer">Kamu dapat memesan dengan mengisi formulir di situs web Aku, kemudian Aku akan menghubungimu untuk keterangan lebih lanjut</p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    
+        <div class="section" id="footer-sec">
+            <div class="footer-container">
+
+                <div class="footer-column">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="https://vgen.co/shossuki">Model Live2D</a></li>
+                        <li><a href="https://vgen.co/shossuki">Rigging Service</a></li>
+                        <li><a href="https://vgen.co/shossuki">Ilustrasi</a></li>
+                        <li><a href="https://vgen.co/shossuki">Animasi</a></li>
+                        <li><a href="https://vgen.co/shossuki">Request Kustom</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Tentang</h3>
+                    <ul>
+                        <li><a href="https://vgen.co/shossuki">Shossuki</a></li>
+                        <li><a href="#more">Portfolio</a></li>
+                        <li><a href="#testimonies">Testimoni</a></li>
+                        <li><a href="#terms-of-services">Ketentuan Layanan</a></li>
+                        <li><a href="#terms-of-services">Alur Proyek</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Dukungan</h3>
+                    <ul>
+                        <li><a href="#faq">Pertanyaan</a></li>
+                        <li><a href="#getintouch">Hubungi Aku</a></li>
+                        <li><a href="#normal-packages">Harga Layanan</a></li>
+                        <li><a href="#getintouch">Status Layanan</a></li>
+                        <li><a href="#getintouch">Pesan Langsung</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-profile">
+                  <img src="images/Icon.jpg" alt="Shossuki Profile">
+                  <h3>Shossuki</h3>
+                  <a href="getintouch"></a>
+                    <p>Live2D Riggerr</p>
+                    <!-- <div class="social-icons">
+                        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                        <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                        <a href="#"><img src="trakteer-icon.png" alt="Trakteer"></a>
+                    </div> -->
+                </div>
+            </div>
+
+
+        </footer>
+      </div>
+  
+    
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("LWZOEpup7nTKJSOuk");
+      })();
+    </script>
+    
+    
+
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        emailjs.send("service_wnyn5qc", "template_hp3cqlz", {
+          from_name: name,
+          from_email: email,
+          message: message
+        }).then(
+          function(response) {
+            document.getElementById("statusMessage").innerText = "Pesan berhasil dikirim!";
+            document.getElementById("statusMessage").style.color = "green";
+            document.getElementById("contactForm").reset(); 
+          },
+          function(error) {
+            document.getElementById("statusMessage").innerText = "Pesan tidak berhasil dikirim, coba lagi";
+            document.getElementById("statusMessage").style.color = "red";
+          }
+        );
+      });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const reviews = [
+          { name: "Achan", country: "United States", text: "Did exactly what I asked to the best of their abilities. I couldn't ask for more, he was very quick to answer messages and the attention to detail was very good. I would recommend this seller to everyone that I know. A++" },
+          { name: "Rorounikenra", country: "Canada", text: "Communication was great and got very prompt response! They went above and beyond in terms of quality of service. Highly recommended :-)" },
+          { name: "Summonerxiv", country: "United States", text: "They are great at communicating with you and are willing to answer any questions you have. I added a couple of last-minute changes I would have liked and they added them in and made it look great." },
+          { name: "Adnan_w", country: "Saudi Arabia", text: "such a wonderful and amazing work from amazing person thank you very much I like the work and you made something the way I wanted thanks again and keep it up man You Are The Best" },
+          { name: "Hamza_ug", country: "Belgium", text: "I have never worked with a partner this driven and understanding. I highly recommend working with Comator. This studio takes is time and even helped finding the right artist for my character design. Feedback gets taken into account and the order doesn't finish unless both parties are super satisfied. I'm already creating a briefing for a new order soon!" },
+          { name: "Aerotempest", country: "United States", text: "Very communicative and responded to my edits! I’m very happy with the rig and they were so nice! I would definitely recommend and I will be returning :)" },
+          { name: "Ragnar_konungr", country: "United States", text: "The seller was very communicative about the project, and the work was astounding. I would highly recommend this seller to anyone looking to get a great Vtuber model!" },
+          { name: "Trayal", country: "United States", text: "Absolutely astounding partner to work with. I was nervous about this as my idea had a lot of things not very common for this type of gig. Completely understanding, willing to help with questions and feedback on ideas, and the final product was AMAZING. I love the result, and loved the process getting to the result. I would absolutely work with them again, and will do so in the future." },
+          { name: "Alexwrightflo", country: "United States", text: "Amazing communication, quick and excellent work. Well done overall! Thank you so much!" },
+          { name: "Lovenji", country: "United Kingdom", text: "The Comator Team did amazing work with my Digi, I trusted them with an important stage of my life as I made dramatic changes to my streaming setup and layout. I was a little nervous, but all those nerves instantly disappeared on first contact. The Comator Team are all lovely people, who put their heart and soul into the work that they do." },
+        ];
+      
+        let index = 0;
+        const reviewContent = document.querySelector(".review-content");
+        const testimonial = document.querySelector(".testimonial");
+        const customer = document.querySelector(".customer");
+      
+        function updateReview() {
+          reviewContent.classList.remove("active");
+          setTimeout(() => {
+            testimonial.textContent = `"${reviews[index].text}"`;
+            customer.textContent = `${reviews[index].name} | ${reviews[index].country}`;
+            reviewContent.classList.add("active");
+            index = (index + 1) % reviews.length;
+          }, 500);
+        }
+      
+        updateReview();
+        setInterval(updateReview, 3000);
+      });
+      </script>
+
+
+<audio id="clickSound" src="sound/click.wav"></audio>
+
+<script>
+
+  function playClickSound() {
+    let clickSound = document.getElementById("clickSound");
+    clickSound.play();
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.querySelectorAll(".clickable");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", playClickSound);
+    });
+  });
+</script>
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".section");
+
+      const fadeInOnScroll = () => {
+        sections.forEach((section) => {
+          const sectionTop = section.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (sectionTop < windowHeight - 100) {
+            section.classList.add("visible");
+          }
+        });
+      };
+
+
+      window.addEventListener("scroll", fadeInOnScroll);
+
+
+      fadeInOnScroll();
+    });
+
+    </script>
+    
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.querySelector(".banner");
+  setTimeout(() => {
+    banner.classList.add("show");
+  }, 500);
+});
+
+    </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const audio = new Audio("sound/click.wav");
+    document.querySelectorAll(".footer-profile h3, .footer-profile img, .footer-column h3, .faq-item, p,#more .moresamples, .form-container button, #more img, i, .orderbtn , a, #testimonies .review, .section h2, h1, table th, table td, .banner .slider .item img").forEach(h2 => {
+      h2.addEventListener("mouseenter", () => {
+        audio.play();
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".slider img");
+  const popupBox = document.getElementById("popupBox");
+
+  images.forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+      const testimoni = img.getAttribute("data-testimoni");
+      popupBox.innerText = testimoni;
+      popupBox.classList.add("visible");
+    });
+
+    img.addEventListener("mouseleave", () => {
+      popupBox.classList.remove("visible");
+    });
+  });
+});
+
+</script>
+  </body>
+</html>
